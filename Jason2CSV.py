@@ -23,3 +23,18 @@ class Converter:
         pd.set_option('display.max_columns', 50)
         df = pd.read_json(self.json_file_path)
         df.to_csv(f'{self.csv_file_path}hh_{self.date}.csv')
+
+
+converter = Converter(file_name='test', json_file_path='/Users/vikentijzerebov/PycharmProjects/job_boards_parser/SavedData/JsonFiles/parsed_hh_companies.json', )
+converter.convert_json_to_csv()
+
+
+def remove_duplicate(it):
+    seen = []
+    for x in it:
+        if x not in seen:
+            yield x
+            seen.append(x)
+
+
+remove_duplicate(te)

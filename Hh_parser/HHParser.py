@@ -553,7 +553,7 @@ print(f'Количество всех индустрий равно {len(all_sub
 for sub in range(len(all_sub_industry_list)):
     print(f'{sub + 1}. {all_sub_industry_list[sub][0]} - {all_sub_industry_list[sub][1]}')
 companies = []
-for industry1 in range(len(all_sub_industry_list) + 1):
+for industry1 in range(len(all_sub_industry_list)):
     print(f'Отрабатываю индустрию №{industry1 + 1}. {all_sub_industry_list[industry1][0]}')
     s_i_l = all_sub_industry_list[industry1][1] + "?area=113&vacanciesRequired=true"
     print(s_i_l)
